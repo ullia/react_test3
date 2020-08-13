@@ -11,7 +11,7 @@ import { Link, Route, BrowserRouter as Router } from "react-router-dom";
 //     });
 // })();
 
-const Header = ({ setStayObj }) => {
+const Header = ({ setStayObj, onBasicList, onWishcList }) => {
     const [scrollTop, setScrollTop] = useState(0);
     // const [sortValue, setSortValue] = useState('');
 
@@ -49,13 +49,9 @@ const Header = ({ setStayObj }) => {
         setStayObj(sortValue);
     }
 
-    const onBasicList = () => {
-        alert('This page is Basic List');
-    }
+    
 
-    const onWishcList = () => {
-        alert('This page is Wish List');
-    }
+    
 
     return (
         <div className="header__wrap">

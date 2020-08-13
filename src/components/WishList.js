@@ -1,11 +1,10 @@
 import React from 'react'
 import './List.scss';
+import List from './List';
 
-const WishList = () => {
+const WishList = ({ staylist }) => {
     return (
-        <div className="list__wrap">
-            wish list test page
-        </div>
+        <List staylist={staylist}/>
     )
 }
 

@@ -2,8 +2,8 @@ import React from 'react'
 import './ListItem.scss';
 import cn from 'classnames';
 
-const ListItem = ({ image, local, name, rating, review, price, wish, days }) => {
-    
+const ListItem = ({ id, image, local, name, rating, review, price, wish, days, handleWishBtn }) => {
+
     return (
         <div className="list__item">
             <div className="item__image">
@@ -11,7 +11,9 @@ const ListItem = ({ image, local, name, rating, review, price, wish, days }) => 
             </div>
             <div className="item__info">
                 <h5>{local}</h5>
-                <h4>{name}</h4>
+                <div className="info__name">
+                    <h4>{name}</h4>
+                </div>
                 <div className="item__info__ratings">
                     <ul>
                         <li><span className="on"></span></li>
@@ -23,7 +25,7 @@ const ListItem = ({ image, local, name, rating, review, price, wish, days }) => 
                     <span className="item__info__review__counter">{review}</span>
                 </div>
                 <p>{price} 원<em> / {days}</em></p>
-                <button className={cn("item__info__btn__wish", {wish})} type="button">Wish</button>
+                <button className={cn("item__info__btn__wish", { wish })} onClick={() => handleWishBtn(id)} type="button">Wish</button>
             </div>
         </div>
     )

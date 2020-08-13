@@ -41,12 +41,25 @@
             font: 400 12px/12px 'NotoSansKR';
             color: #8b8b8b;
         }
-        h4{
-            margin-bottom: 20px;
-            font: 600 16px/22px 'NotoSansKR';
-            color: #000;
+        .info__name{
+            width: 268px;
+            h4 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-wrap: break-word;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                /* ellipsis line */
+                -webkit-box-orient: vertical;
+
+                height: 2.4em;
+                font: 600 16px/1.2em 'NotoSansKR';
+                color: #000;
+            }
         }
+        
         .item__info__ratings{
+            margin-top: 20px;
             overflow: hidden;
             ul {
                 overflow: hidden;
