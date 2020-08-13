@@ -119,27 +119,26 @@ const App = () => {
     }
   }, [staylist]);
 
-
-  // const originData = (function (originArr){
-  //   console.log('11111111');
-  //   return originArr;
-  // })();
+ 
   
 
-  const onBasicList = () => {
-    console.log('헤더누름')
+  const onBasicList = (originArr) => {
+    console.log('This page is Header');
 
     // console.log(originData);
-    setStaylist(
-      // originData.map(item => item)
-    );
+    // setStaylist(
+    //   originArr.map(item => item)
+    // );
   }
 
-  const onWishcList = useCallback(() => {
-    alert('This page is Wish List');
 
-    // const originArr = staylist;
-    const testArr = staylist.filter(item => item.wish == true);
+
+
+  const onWishcList = useCallback(() => {
+    console.log('This page is Wish List');
+
+    const originArr = staylist;
+    const testArr = staylist.filter(item => item.wish === true);
 
     // originData(originArr);
     // console.log("필터됨");
@@ -148,6 +147,7 @@ const App = () => {
       testArr.map(item => item)
     )
 
+    // onBasicList(originArr);
     
   }, [staylist]);
 
